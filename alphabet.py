@@ -43,6 +43,17 @@ class Alphabet:
 		if indices:
 			return [self.toChar(indices[i]) for i in indices if valid_index(indices[i])]
 			
+	def counts(self, string: str) -> None:
+		"""Return list containing counts of the alphabets in string."""
+		if string:
+			R = self.get_radix()
+			count = [0] * R
+			for key in string:
+				if self.contains(key):
+					count[self.toIndex(key)] += 1
+			for index in range(R):
+				if count[index] >= 0:
+					print(self.toChar(index), '  ', count[index])
+		
+		
 
-		
-		
