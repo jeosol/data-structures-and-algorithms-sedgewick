@@ -14,7 +14,11 @@ class Alphabet:
 		"""Number of bits to represent an index."""
 		if self.radix > 0:
 			return math.log(self.radix, 2)		
-		
+
+	def contains(self, string: str) -> bool:
+		if string:
+			return string in self.alphabet
+				
 	def toChar(self, index : int) -> str:
 		"""Convert index to corresponding alphabet char."""
 		if index >= 0 and < self.radix:
@@ -29,7 +33,7 @@ class Alphabet:
 	def toIndices(self, string : str) -> list:
 		"""Convert string to base-R integer."""
 		if string:
-			return [self.toIndex(string[i]) for i in range(len(string))]
+			return [self.toIndex(string[i]) for i in range(len(string)) if self.contains(string[i])]
 		
 	def toChars(self, indices : list) -> str:
 		"""Convert base-R integer to string over this alphabet."""
