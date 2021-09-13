@@ -19,9 +19,12 @@ class Alphabet:
 		if string:
 			return string in self.alphabet
 				
+	def valid_index(self, index: int) -> bool:
+		return index >= 0 and index <= self.radix-1
+		
 	def toChar(self, index : int) -> str:
 		"""Convert index to corresponding alphabet char."""
-		if index >= 0 and < self.radix:
+		if self.valid_index(index):
 			return self.alphabet[index]
 				
 	def toIndex(self, char : str) -> int:
@@ -38,7 +41,7 @@ class Alphabet:
 	def toChars(self, indices : list) -> str:
 		"""Convert base-R integer to string over this alphabet."""
 		if indices:
-			return [self.toChar(indices[i]) for i in range(len(indices))]
+			return [self.toChar(indices[i]) for i in indices if valid_index(indices[i])]
 			
 
 		
