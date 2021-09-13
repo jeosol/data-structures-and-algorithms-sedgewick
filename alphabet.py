@@ -1,7 +1,7 @@
 import math
 
 class Alphabet:
-	def __init__(string : str) -> None:
+	def __init__(self, string : str) -> None:
 		self.alphabet = string
 		self.radix = len(string)
 		self.indices = { k : v for (k, v) in zip(string, range(self.radix)}
