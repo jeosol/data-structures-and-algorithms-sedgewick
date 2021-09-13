@@ -6,7 +6,7 @@ class Alphabet:
 		self.radix = len(string)
 		self.indices = { k : v for (k, v) in zip(string, range(self.radix)}
 		
-	def radix(self):
+	def get_radix(self):
 		"""Return the number of characters in the alphabet."""
 		return self.radix
 	
