@@ -27,7 +27,7 @@ class Alphabet:
 		return None
 				
 	def toIndices(self, string : str) -> list:
-		"""Converts string to base-R integer."""
+		"""Convert string to base-R integer."""
 		if string:
 			return [self.toIndex(string[i]) for i in range(len(string))]
 		
