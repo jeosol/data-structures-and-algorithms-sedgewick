@@ -2,6 +2,7 @@
 
 # Given a list of integers
 # Assume a radix of the elements of the integer set
+# Complexity is O(n + r)
 
 def count_sort(array : list[int], radix : int = 10) -> list[int]:
 	if not array:
