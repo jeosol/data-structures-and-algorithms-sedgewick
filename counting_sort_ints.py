@@ -32,7 +32,6 @@ def count_sort(array : list[int], radix : int = 10) -> list[int]:
 	
 	return aux_array
 	
-	
 import unittest
 
 class TestCountSort(unittest.TestCase):
@@ -50,7 +49,6 @@ class TestCountSort(unittest.TestCase):
 	def test_array_ok(self):
 		self.assertEqual([1,2,3,9], count_sort(self.array_ok))
 		
-
 if __name__ == "__main__":
 	unittest.main()
 		
