@@ -10,10 +10,10 @@ class Alphabet:
 		"""Return the number of characters in the alphabet."""
 		return self.radix
 	
-	def logR(self):
+	def logR(self) -> int:
 		"""Number of bits to represent an index."""
 		if self.radix > 0:
-			return math.log(self.radix, 2)		
+			return int(math.log(self.radix, 2))		
 
 	def contains(self, string: str) -> bool:
 		if string:
