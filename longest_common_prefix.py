@@ -1,6 +1,8 @@
 from typing import Optional
 
 def longest_common_prefix(str1 : str, str2 : str) -> str:
+	"""Return the longest_common_prefix between two strings str1 and str2."""
+	
 	if type(str1) != str or type(str2) != str:
 		return None
 		
